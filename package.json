@@ -1,0 +1,24 @@
+{
+  "name": "torlink-gui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mouse-friendly web GUI for torlink (npx torlnk)",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c cyan,magenta \"node server/index.js\" \"vite\"",
+    "build": "vite build",
+    "test": "node --test",
+    "start": "node server/index.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "vite": "^6.0.7"
+  }
+}
