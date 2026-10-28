@@ -1,0 +1,26 @@
+# Keep Windows entry points usable when the repository is checked out on any OS.
+* text=auto
+
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+*.ps1     text eol=crlf
+*.vbs     text eol=crlf
+*.sh      text eol=lf
+*.command text eol=lf
+
+*.ico   binary
+*.png   binary
+*.icns  binary
+*.zip   binary
+
+# Never ship generated, platform-specific files in a GitHub source archive.
+node_modules export-ignore
+node_modules/** export-ignore
+dist export-ignore
+dist/** export-ignore
+.runtime export-ignore
+.runtime/** export-ignore
+Torlink.app export-ignore
+Torlink.app/** export-ignore
+.DS_Store export-ignore
+**/.DS_Store export-ignore

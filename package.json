@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Mouse-friendly web GUI for torlink (npx torlnk)",
+  "description": "Mouse-friendly desktop web UI for torlink on Windows, macOS and Linux",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "concurrently -k -n api,web -c cyan,magenta \"node server/index.js\" \"vite\"",
     "build": "vite build",
@@ -14,7 +17,8 @@
   "dependencies": {
     "express": "^4.21.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "torlnk": "^1.10.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
